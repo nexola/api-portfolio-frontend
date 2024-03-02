@@ -29,6 +29,7 @@
 
 * {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  transition: 0.3s ease-in-out;
 }
 
 p,
@@ -83,6 +84,7 @@ body {
 .logo--container {
   position: relative;
   top: -80px;
+  left: -80px;
 }
 
 .container--form {
@@ -135,6 +137,10 @@ body {
   align-self: center;
 }
 
+.arrow-enter {
+  align-items: end;
+}
+
 .forgot--password {
   color: var(--y1);
   font-size: 1.35rem;
@@ -144,7 +150,7 @@ body {
 .copyright,
 .copyright a {
   color: var(--c7);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-top: 120px;
   align-self: flex-start;
 }
@@ -161,15 +167,18 @@ body {
 
 .btn:hover {
   background: linear-gradient(var(--p3), var(--p5));
-  transition: 0.3s ease-in-out;
 }
 
 .forgot--password:hover {
   color: var(--y1-hover);
 }
 
+.btn--login:hover .arrow-enter {
+  transform: translateX(24px);
+}
+
 .btn--login:hover {
-  transform: translateX(4px);
+  border-color: var(--c1);
 }
 
 .copyright a:hover {
