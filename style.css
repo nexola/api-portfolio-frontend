@@ -89,7 +89,6 @@ body {
   padding: 40px;
   box-sizing: border-box;
   align-items: center;
-  justify-content: center;
 }
 
 .input {
@@ -212,4 +211,30 @@ textarea:focus {
 #signup .copyright,
 .copyright a {
   margin-top: 60px;
+}
+
+/* PASSWORD RECOVER */
+#pass-recover .main--container {
+  display: flex;
+  flex-direction: column;
+}
+
+#pass-recover .container--form {
+  border-radius: 6px 6px 0 0;
+}
+
+#pass-recover,
+#pass-recover .main--container,
+#pass-recover .container--bg img {
+  width: 920px;
+}
+
+#pass-recover .container--bg img {
+  height: 200px;
+  border-radius: 0 0 6px 6px;
+}
+
+#pass-recover .btns--login {
+  display: flex;
+  justify-content: center;
 }
