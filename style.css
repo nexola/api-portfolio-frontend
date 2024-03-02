@@ -29,7 +29,6 @@
 
 * {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  transition: 0.3s ease-in-out;
 }
 
 p,
@@ -40,14 +39,16 @@ h4,
 div,
 form,
 a,
-main {
+main,
+body {
   margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: var(--c12);
   display: flex;
-  max-width: 1200px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
@@ -68,23 +69,16 @@ body {
   width: max-content;
 }
 
-.btn,
-.input input {
-  box-shadow: 0 4px 2px 0 var(--c13);
-}
-
 /* LOGIN */
 .main--container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 1600px;
-  margin-top: 64px;
+  margin-top: 100px;
 }
 
 .logo--container {
   position: relative;
   top: -80px;
-  left: -80px;
 }
 
 .container--form {
@@ -102,24 +96,25 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.75rem;
   color: var(--c3);
 }
 
 .input input {
   height: 60px;
-  font-size: 1.35rem;
-  border: none;
+  font-size: 1.15rem;
+  background-color: var(--c5);
+  border: 2px solid var(--c7);
   border-radius: 6px;
   padding-left: 16px;
   box-sizing: border-box;
 }
 
-.form--login {
+.form--login,
+.form--signup {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
   box-sizing: border-box;
 }
 
@@ -130,35 +125,44 @@ body {
   margin-top: 24px;
 }
 
-.btn--login {
+.btn--login,
+.btn--voltar {
   border: 4px solid var(--p1);
   border-radius: 6px;
   padding: 12px 80px;
   align-self: center;
+  transition: 0.3s ease-in-out;
 }
 
-.arrow-enter {
-  align-items: end;
+.arrow-enter,
+.btn--voltar img {
+  transition: 0.3s ease-in-out;
+}
+
+.btn--voltar img {
+  transform: rotate(180deg);
 }
 
 .forgot--password {
   color: var(--y1);
   font-size: 1.35rem;
   margin-top: 24px;
+  transition: 0.3s ease-in-out;
 }
 
 .copyright,
 .copyright a {
   color: var(--c7);
   font-size: 1.25rem;
-  margin-top: 120px;
+  margin-top: 80px;
   align-self: flex-start;
+  transition: 0.3s ease-in-out;
 }
 
 .container--bg img {
   height: 100%;
   object-fit: cover;
-  width: 500px;
+  width: 400px;
 }
 
 .bg--login {
@@ -167,20 +171,45 @@ body {
 
 .btn:hover {
   background: linear-gradient(var(--p3), var(--p5));
+  transition: 0.3s ease-in-out;
 }
 
 .forgot--password:hover {
   color: var(--y1-hover);
+  transition: 0.3s ease-in-out;
 }
 
 .btn--login:hover .arrow-enter {
   transform: translateX(24px);
+  transition: 0.3s ease-in-out;
 }
 
-.btn--login:hover {
+.btn--voltar:hover img {
+  transform: translateX(-24px) rotate(180deg);
+  transition: 0.3s ease-in-out;
+}
+
+.btn--login:hover,
+.btn--voltar:hover {
   border-color: var(--c1);
 }
 
 .copyright a:hover {
   color: var(--c9);
+}
+
+.input input:focus,
+.input input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--p1);
+  background: var(--c1);
+  box-shadow: 0 0 1px 2px #fea;
+}
+
+/* SIGN UP */
+
+#signup .copyright,
+.copyright a {
+  margin-top: 60px;
 }
