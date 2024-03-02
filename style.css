@@ -55,14 +55,16 @@ body {
 }
 
 .btn {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: var(--p6);
   font-weight: bold;
-  padding: 12px 64px;
+  padding: 18px 64px;
   background: linear-gradient(var(--p1), var(--p3));
   border-radius: 6px;
   text-align: center;
+  align-self: center;
+  width: max-content;
 }
 
 .btn,
@@ -98,14 +100,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--c3);
 }
 
 .input input {
   height: 60px;
-  font-size: 1.75rem;
+  font-size: 1.35rem;
   border: none;
   border-radius: 6px;
   padding-left: 16px;
@@ -124,18 +126,18 @@ body {
   grid-template-columns: 2fr 1fr;
   gap: 40px;
   margin-top: 24px;
-  box-sizing: border-box;
 }
 
 .btn--login {
   border: 4px solid var(--p1);
   border-radius: 6px;
   padding: 12px 80px;
+  align-self: center;
 }
 
 .forgot--password {
   color: var(--y1);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   margin-top: 24px;
 }
 
@@ -143,18 +145,14 @@ body {
 .copyright a {
   color: var(--c7);
   font-size: 1.5rem;
-  justify-self: end;
   margin-top: 120px;
   align-self: flex-start;
-}
-
-.copyright {
-  padding-left: 20px;
 }
 
 .container--bg img {
   height: 100%;
   object-fit: cover;
+  width: 500px;
 }
 
 .bg--login {
