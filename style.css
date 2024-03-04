@@ -21,6 +21,7 @@
   --p4: #ba9801;
   --p5: #967a00;
   --p6: #423600;
+  --p7: #786200;
 
   --x1: #ef8a8a;
   --y1: #78b1e5;
@@ -42,7 +43,9 @@ div,
 form,
 a,
 main,
-body {
+body,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -72,14 +75,11 @@ body {
 }
 
 /* LOGIN */
-#login .main--container {
-  margin-top: 64px;
-}
 
 .main--container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 50px;
+  margin-top: 10vh;
 }
 
 .logo--container {
@@ -116,7 +116,9 @@ body {
 }
 
 .form--login,
-.form--signup {
+.form--signup,
+.form--new-password,
+.form--pass-recover {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -148,7 +150,7 @@ body {
   transform: rotate(180deg);
 }
 
-.forgot--password {
+a {
   color: var(--y1);
   font-size: 1.35rem;
   margin-top: 24px;
@@ -177,9 +179,10 @@ body {
 .btn:hover {
   background: linear-gradient(var(--p3), var(--p5));
   transition: 0.3s ease-in-out;
+  color: inherit;
 }
 
-.forgot--password:hover {
+a:hover {
   color: var(--y1-hover);
   transition: 0.3s ease-in-out;
 }
@@ -223,7 +226,6 @@ textarea:focus {
 #pass-recover .main--container {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
 }
 
 #pass-recover .container--form {
@@ -244,4 +246,135 @@ textarea:focus {
 #pass-recover .btns--login {
   display: flex;
   justify-content: center;
+}
+
+/* HOME */
+
+#home .main--container,
+#home .container--form,
+#home {
+  display: initial;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#home .main--container {
+  margin-top: 10vh;
+}
+
+#home .logo--container {
+  position: relative;
+  top: -40px;
+}
+
+#home .container--form {
+  margin-top: 10vh;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+#home ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+
+#home li > a {
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 8px 16px;
+  color: var(--p7);
+  display: inline-block;
+}
+
+#home li > a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: var(--c2);
+}
+
+#home li > a:hover {
+  color: var(--p1);
+}
+
+#home li > a:hover::after {
+  width: 100%;
+  transition: 0.3s;
+}
+
+#home .nav--active::after {
+  width: 100%;
+}
+
+#home .nav--active {
+  font-size: 2.5rem;
+  color: var(--p1);
+}
+
+#home h3 {
+  letter-spacing: 1px;
+  color: var(--c1);
+  font-weight: 600;
+}
+
+#home h3::after {
+  display: inline-block;
+  margin-left: 8px;
+  content: "";
+  height: 17px;
+  width: 30px;
+  background: url(./assets/arrow-down.svg);
+}
+
+#home h3,
+#home .link-portfolio {
+  line-height: 1px;
+  font-size: 1.75rem;
+  justify-self: start;
+}
+
+#home .container--link-portfolio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#home .copy-link {
+  content: "";
+  display: inline;
+  height: 32px;
+  width: 32px;
+  background: url(./assets/copy.svg);
+  transition: 0.3s ease-in-out;
+}
+
+#home .copy-link:hover {
+  background: url(./assets/copy-hover.svg);
+  transition: 0.3s ease-in-out;
+}
+
+#home header {
+  align-self: start;
+  display: flex;
+  border-bottom: 2px solid var(--c10);
+  padding-bottom: 24px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home .signout {
+  display: inline-block;
+  content: "";
+  width: 45px;
+  height: 45px;
+  background: url(./assets/signout.svg);
+}
+
+#home .signout:hover {
+  background: url(./assets/signout-grey.svg);
 }
