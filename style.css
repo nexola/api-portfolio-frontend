@@ -425,3 +425,83 @@ textarea:focus {
   width: 990px;
   margin-bottom: 12px;
 }
+
+@media (max-width: 1000px) {
+  /* LOGIN E SIGNUP */
+  body {
+    background-color: var(--c11);
+    padding: 0;
+  }
+  .container--bg {
+    display: none;
+  }
+
+  .main--container {
+    grid-template-columns: 1fr;
+    margin: 80px auto;
+  }
+
+  .container--form {
+    border-radius: 6px;
+  }
+
+  .btns--login {
+    display: flex;
+    gap: 24px;
+    margin-top: 0;
+  }
+
+  .btn--login,
+  .btn--voltar {
+    padding: 12px 64px;
+  }
+
+  .btn {
+    padding: 18px 64px;
+  }
+
+  .copyright {
+    align-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  /* LOGIN E SIGNUP */
+  .logo--container img {
+    height: 48px;
+  }
+
+  .main--container {
+    max-width: initial;
+  }
+
+  .container--form {
+    border-radius: 0;
+    padding: 0 20px 10px 20px;
+    width: inherit;
+  }
+
+  .input {
+    gap: 4px;
+  }
+
+  .input input {
+    height: 40px;
+  }
+
+  .form--login,
+  .form--signup,
+  .form--new-password,
+  .form--pass-recover {
+    gap: 12px;
+  }
+
+  .btn--login,
+  .btn--voltar {
+    padding: 12px 36px;
+  }
+
+  .btn {
+    padding: 18px 36px;
+  }
+}
