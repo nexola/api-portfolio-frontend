@@ -217,7 +217,6 @@ textarea:focus {
 }
 
 /* SIGN UP */
-
 #signup .copyright,
 .copyright a {
   margin-top: 60px;
@@ -463,6 +462,13 @@ textarea:focus {
   .copyright {
     align-self: center;
   }
+
+  /* PASS RECOVER */
+  #pass-recover,
+  #pass-recover .main--container,
+  #pass-recover .container--bg img {
+    width: initial;
+  }
 }
 
 @media (max-width: 600px) {
@@ -473,6 +479,10 @@ textarea:focus {
 
   .main--container {
     max-width: initial;
+  }
+
+  #pass-recover .container--form {
+    max-width: 380px;
   }
 
   .container--form {
