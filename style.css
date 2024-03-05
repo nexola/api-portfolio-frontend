@@ -59,6 +59,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  padding: 24px;
 }
 
 .btn {
@@ -79,7 +80,7 @@ body {
 .main--container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 10vh;
+  margin-top: 6vh;
 }
 
 .logo--container {
@@ -258,17 +259,13 @@ textarea:focus {
   margin: 0 auto;
 }
 
-#home .main--container {
-  margin-top: 10vh;
-}
-
 #home .logo--container {
   position: relative;
   top: -40px;
 }
 
 #home .container--form {
-  margin-top: 10vh;
+  margin-top: 6vh;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -377,4 +374,54 @@ textarea:focus {
 
 #home .signout:hover {
   background: url(./assets/signout-grey.svg);
+}
+
+#home .form--home {
+  opacity: 0;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#home .form--active {
+  opacity: 1;
+}
+
+#home .row--input {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 24px;
+}
+
+#home .input textarea.text-area {
+  font-size: 1.55rem;
+  background-color: var(--c5);
+  border: 2px solid var(--c7);
+  border-radius: 6px;
+  padding: 16px;
+  box-sizing: border-box;
+  resize: none;
+  height: 108px;
+}
+
+#home textarea.text-area:focus {
+  outline: none;
+  border-color: var(--p1);
+  background: var(--c1);
+  box-shadow: 0 0 1px 2px #fea;
+}
+
+#home .input {
+  width: 100%;
+}
+
+#home .input input {
+  font-size: 1.75rem;
+}
+
+#home .btn--att-portfolio {
+  width: 990px;
+  margin-bottom: 12px;
 }
