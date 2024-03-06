@@ -36,7 +36,7 @@
           </ul>
         </nav>
         <form action="" class="form--header form--active form--home">
-          <div class="row--input">
+          <div class="row--input row--input-8-2">
             <div class="input">
               <label for="title">Título</label>
               <input type="text" id="title" name="title" />
@@ -58,6 +58,55 @@
               ></textarea>
             </div>
           </div>
+        </form>
+
+        <form action="" class="form--project form--active form--home">
+          <div class="row--input row--input-5-4-1">
+            <div class="input">
+              <label for="name">Nome do projeto</label>
+              <input type="text" id="name" name="name" />
+            </div>
+            <div class="input">
+              <label for="course">Plataforma de origem</label>
+              <input type="text" id="course" name="course" />
+            </div>
+            <div class="input">
+              <label for="conclusionYear">Conclusão</label>
+              <input type="number" id="conclusionYear" name="conclusionYear" />
+            </div>
+          </div>
+          <div class="row--textarea">
+            <div class="input">
+              <label for="description">Descrição</label>
+              <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="10"
+                class="text-area"
+              ></textarea>
+            </div>
+          </div>
+          <div class="container--technologies">
+            <h4 for="">Quais tecnologias você utilizou nesse projeto?</h4>
+            <ul class="technologies">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>PostgreSQL</li>
+            </ul>
+            <div class="row--technology">
+              <input
+                type="text"
+                class="input--technology"
+                id="technology"
+                name="technology"
+              />
+              <a href="./" class="btn--add-technology">
+                <img src="./assets/top-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <a href="./" class="btn--add-project">ADICIONAR PROJETO</a>
         </form>
         <a href="./home.html" class="btn btn--att-portfolio"
           >Atualizar Portfólio</a

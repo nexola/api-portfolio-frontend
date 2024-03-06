@@ -1,0 +1,12 @@
+<form action="" class="form--project form--active form--home">
+  <div class="row--input row--input-5-5">
+    <div class="input">
+      <label for="name">Nome do projeto</label>
+      <input type="text" id="name" name="name" />
+    </div>
+    <div class="input">
+      <label for="course">Plataforma de origem</label>
+      <input type="text" id="course" name="course" />
+    </div>
+  </div>
+</form>

@@ -50,6 +50,12 @@ li {
   padding: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body {
   background-color: var(--c12);
   display: flex;
@@ -179,8 +185,8 @@ a {
 
 .btn:hover {
   background: linear-gradient(var(--p3), var(--p5));
-  transition: 0.3s ease-in-out;
-  color: inherit;
+  transition: 0.3s;
+  color: var(--c13);
 }
 
 a:hover {
@@ -254,7 +260,7 @@ textarea:focus {
 #home .container--form,
 #home {
   display: initial;
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
 }
 
@@ -279,10 +285,11 @@ textarea:focus {
 
 #home li > a {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.55rem;
   padding: 8px 16px;
   color: var(--p7);
   display: inline-block;
+  margin-top: 12px;
 }
 
 #home li > a::after {
@@ -307,7 +314,7 @@ textarea:focus {
 }
 
 #home .nav--active {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: var(--p1);
 }
 
@@ -329,7 +336,7 @@ textarea:focus {
 #home h3,
 #home .link-portfolio {
   line-height: 1px;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   justify-self: start;
 }
 
@@ -366,8 +373,8 @@ textarea:focus {
 #home .signout {
   display: inline-block;
   content: "";
-  width: 45px;
-  height: 45px;
+  width: 32px;
+  height: 32px;
   background: url(./assets/signout.svg);
 }
 
@@ -376,26 +383,40 @@ textarea:focus {
 }
 
 #home .form--home {
-  opacity: 0;
+  display: none;
   width: 100%;
-  padding: 24px;
-  display: flex;
+  padding: 16px;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 #home .form--active {
-  opacity: 1;
+  display: flex;
 }
 
 #home .row--input {
   display: grid;
-  grid-template-columns: 3fr 1fr;
   gap: 24px;
 }
 
+#home .row--input-8-2 {
+  grid-template-columns: 4fr 1fr;
+}
+
+#home .row--input-6-4 {
+  grid-template-columns: 3fr 2fr;
+}
+
+#home .row--input-5-5 {
+  grid-template-columns: 1fr 1fr;
+}
+
+#home .row--input-5-4-1 {
+  grid-template-columns: 5fr 4fr 1fr;
+}
+
 #home .input textarea.text-area {
-  font-size: 1.55rem;
+  font-size: 1.35rem;
   background-color: var(--c5);
   border: 2px solid var(--c7);
   border-radius: 6px;
@@ -414,23 +435,50 @@ textarea:focus {
 
 #home .input {
   width: 100%;
+  font-size: 1.55rem;
 }
 
 #home .input input {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
+  height: 48px;
 }
 
 #home .btn--att-portfolio {
-  width: 990px;
-  margin-bottom: 12px;
+  width: max-content;
+  margin: 12px 0 8px 0;
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  gap: 8px;
 }
 
-@media (max-width: 1000px) {
+#home .btn--att-portfolio::before {
+  content: "";
+  height: 20px;
+  width: 21px;
+  background: url(./assets/refresh.svg);
+}
+
+#home .btn--att-portfolio:hover:before {
+  background: url(./assets/refresh-dark.svg);
+  transition: 0.3s;
+}
+
+#home a:hover {
+  transition: 0.3s;
+}
+
+#home a {
+  transition: initial;
+}
+
+#home @media(max-width: 1000px) {
   /* LOGIN E SIGNUP */
   body {
     background-color: var(--c11);
     padding: 0;
   }
+
   .container--bg {
     display: none;
   }
